@@ -1,0 +1,41 @@
+.header{
+    min-height: 0;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 75vh;
+}
+
+.contacts h4{
+    text-align: center;
+    font-size: 55px;
+    margin-top: 12vh;
+}
+
+
+.email_text{
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.contacts p {
+    text-align: center;
+    margin-top: 12vh;
+    margin-bottom: 5vh;
+    font-size: 25px;
+}
+
+
+@media screen and (max-width: 450px) {
+    .contacts h4{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .contacts p{
+        margin-top: 10vh;
+        font-size: 20px;
+    }
+} 

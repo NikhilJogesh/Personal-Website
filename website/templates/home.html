@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %} HOME {% endblock %}
+
+{% block head %} 
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}"> 
+{% endblock %}
+
+{% block header %}
+    <div class="landing_page">
+        <h1 class="title"> NIHKIL JOGESH </h1>
+        <h3 class="line sub_text"> Student.Programmer.Teenager </h3>
+        <a href="/#about_me" class="learn_more"> LEARN MORE </a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <section class="about_me" id="about_me">
+        <h1 class="about_me_title"> ABOUT ME </h1>
+        <div class="seperator"></div>
+        <p>Hi! My name is Nikhil. I am a 14 year old student learning software development for
+            fun. I have always been interested in computers, so I picked up coding when I was 
+            12 and started making little projects, like this website. Now, I am working on my 
+            goal to be the best version of programmer in me. You can view my projects in the 
+            'projects' page. Thank you.
+        </p>
+        <div class="end_redirects">
+            <a href="/projects">PROJECTS</a>
+            <a href="/contacts">CONTACTS</a>
+        </div>
+    </section>
+{% endblock %}
+

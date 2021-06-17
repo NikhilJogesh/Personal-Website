@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>{% block title %} {% endblock %}</title>
+    {% block head %} {% endblock %}
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <h1 class="nav_title"> >>>NikhilJogesh </h1>
+                <ul class="nav_links"> 
+                    <li><a href="/" class="nav_button">HOME</a></li>
+                    <li><a href="/projects"  class="nav_button">PROJECTS</a></li>
+                    <li><a href="/contacts"  class="nav_button">CONTACTS</a></li>
+                </ul>
+            </nav>
+            {% block header %} 
+
+            {% endblock%}
+        </header>
+
+        {% block content %} 
+
+        {% endblock%}
+
+        <footer class="footer">
+            <div class="socials">
+                <a href = "mailto: nikhiljogesh2007@gmail.com" target="_blank"> <img src="{{ url_for('static', filename='img/mail.png') }}" alt="mail"> </a>
+                <a href="https://github.com/NikhilJogesh" target="_blank"> <img src="{{ url_for('static', filename='img/github.png') }}" alt="github"> </a>
+                <a href="https://www.facebook.com/nikhil.jogesh.7" target="_blank"> <img src="{{ url_for('static', filename='img/facebook.png') }}" alt="facebook"> </a>
+                <a href="https://www.instagram.com/nikhiljogesh/" target="_blank"> <img src="{{ url_for('static', filename='img/instagram.png') }}" alt="instagram"> </a>
+            </div>
+
+            <h4 class="copyrights-text">&#169 2021 NIKHIL JOGESH. ALL RIGHTS RESERVED.</h4>
+        </footer>
+</div>
+</body>
+</html>

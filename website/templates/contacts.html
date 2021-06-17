@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %} CONTACTS {% endblock %}
+
+{% block head %} 
+    <link rel="stylesheet" href="{{url_for('static' , filename='contacts.css')}}">
+{% endblock %}
+
+{% block content %}
+    <section class="contacts">
+        <h4>FEEL FREE TO EMAIL ME!</h4>
+        <p class="email_text"><em> nikhiljogesh2007@gmail.com </em></p>
+        <a href = "mailto: nikhiljogesh2007@gmail.com" target="_blank"> <img src="{{ url_for('static', filename='img/mail.png') }}" alt="mail"> </a>
+        <p>AND MAKE SURE TO CHECK ALL MY SOCIALS</p>
+    </section>
+{% endblock %}

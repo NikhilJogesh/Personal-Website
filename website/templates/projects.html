@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %} PROJECTS {% endblock %}
+    
+{% block head %} 
+    <link rel="stylesheet" href="{{url_for('static' , filename='projects.css')}}">  
+{% endblock %}
+
+{% block content %}
+    <section class="projects">
+        <h4> SORRY, nothing to show yet :(</h4>
+        <p>Stay tuned for future projects!</p>
+        <img src="{{ url_for('static', filename='img/error.png') }}" alt="error_icon">
+    </section>
+{% endblock %}
