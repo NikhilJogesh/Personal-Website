@@ -1,6 +1,6 @@
 from flask import Flask
 
-# Context Manger
+# Context Manager
 class SecretKeyFile:
     def __init__(self, filename, method):
         try:
