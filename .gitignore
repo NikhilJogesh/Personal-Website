@@ -1,5 +1,7 @@
 __pycache__
 .idea
 .vscode
+.mypy_cache
+secret_key.txt
 github_data.py
 venvMyWebsite
