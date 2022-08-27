@@ -1,0 +1,31 @@
+{% extends "blog_base.html" %}
+
+{% block title %} BLOG-SIGNUP {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='blog_signup.css') }}">
+{% endblock %}
+
+{% block content %}
+    <section class="blog_signup">
+        <h2 class="page_title">Sign Up</h2>
+        <form class="signup_form" method="POST">
+            <label for="email">Email : </label>
+            <br>
+            <input class="input" type="email" placeholder="Enter Email" id="email" name="signup_email">
+            <br>
+            <p class="email_warning">A verification code will be sent to this email.</p>
+            <label for="username">Username : </label>
+            <br>
+            <input class="input" type="text" placeholder="Enter Username" id="username" name="signup_username">
+            <br>
+            <label for="password">Password : </label>
+            <br>
+            <input class="input" type="password" placeholder="Enter Password" id="password1" name="signup_password1">
+            <br>
+            <input class="input" type="password" placeholder="Renter Password" id="password2" name="signup_password2">
+            <br>
+            <button class="button" type="submit">Submit</button>
+        </form>
+    </section>
+{% endblock %}

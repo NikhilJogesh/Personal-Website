@@ -1,0 +1,102 @@
+.header{
+    min-height: 0;
+}
+
+.blog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 50px 50px 5%;
+    background-color: #F1F0F0;
+    width: 65vw;
+    justify-self: center;
+
+}
+
+.page_title{
+    text-emphasis: 700;
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    width: 55vw;
+    margin: 10px 0%;
+    border: 3px solid #424651;
+    border-radius: 10px;
+    flex-wrap: wrap;
+
+}
+
+.post_info{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+
+}
+
+.post .post_info .filler{
+    flex: 1;
+    text-align: center;
+}
+
+.post .post_info .title{
+    text-align: center;
+    flex-grow: 2;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.post .post_info .date_posted{
+    flex: 1;
+    text-align: center;
+    box-sizing: content-box;
+    font-size: 15px;
+}
+
+.content{
+    font-size: 25px;
+    margin: 30px;
+    max-width: 50vw;
+    word-wrap: break-word;
+    font-weight: 500;
+
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 10; /* number of lines to show */
+           line-clamp: 10;
+   -webkit-box-orient: vertical;
+
+}
+
+
+.dividing_line {
+
+    background-color: #424651;
+    height: 3px;
+    width: 97%;
+    align-self: center;
+}
+
+.read_more{
+    color: black;
+    text-align: right;
+    margin-right: 20px;
+    font-weight: 600;
+    border: 2px solid black;
+    width: max-content;
+    align-self: flex-end;
+    padding: 1px;
+    margin-bottom: 5px;
+}
+

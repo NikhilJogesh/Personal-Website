@@ -1,7 +1,9 @@
 **/__pycache__/
+database
 .idea
 .vscode
 .mypy_cache
-secret_key.txt
+secret_key.json
 github_data.py
 venvMyWebsite
+run.bat

@@ -1,11 +1,11 @@
 from flask import Flask
 
-# Context Manager
+# Context Manger
 class SecretKeyFile:
     def __init__(self, filename, method):
         try:
             self.file = open(filename, method)
-        # Creates a new file and writes a defualt value to it
+        # Creates a new file and write a defual value to it
         except FileNotFoundError:
             self.file = open("secret_key.txt", "w+")
             self.file.write("default")

@@ -1,0 +1,24 @@
+{% extends "admin_base.html" %}
+
+{% block title %} hackr {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static' , filename='admin_home.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="centered_container">
+        <h1 class="greetings">Welcome back thee sir.</h1>
+        <div class="create_post">
+            <div class="header">
+                <h3 class="title">Create a post</h3>
+                <button class="button" type="submit" name="post_btn" form="create_post_form">Post</button>
+            </div>
+
+            <form class="create_post_form" id="create_post_form" method="POST">
+                <input class="input" type="text" placeholder="Title" name="post_title">
+                <textarea class="content_input" placeholder="Content" name="post_content"></textarea>
+            </form>
+        </div>
+    </div>
+{% endblock %}

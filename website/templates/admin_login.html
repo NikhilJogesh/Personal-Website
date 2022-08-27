@@ -1,0 +1,25 @@
+{% extends "admin_base.html" %}
+
+{% block title %} Admin? {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static' , filename='admin_login.css')}}">
+{% endblock %}
+
+{% block content %}
+<section class="admin_login">
+    <h2 class="page_title">Admin Login</h2>
+    <form class="login_form" method="POST">
+        <label for="username">Email : </label>
+        <br>
+        <input class="input" type="username" placeholder="Enter Username" id="username" name="login_username">
+        <br>
+        <label for="password">Password : </label>
+        <br>
+        <input class="input" type="password" placeholder="Enter Password" id="password" name="login_password">
+        <br>
+        <button class="button" type="submit">Submit</button>
+    </form>
+</section>
+
+{% endblock %}

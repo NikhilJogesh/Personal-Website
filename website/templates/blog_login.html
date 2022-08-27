@@ -1,0 +1,25 @@
+{% extends "blog_base.html" %}
+
+{% block title %} BLOG-LOGIN {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='blog_login.css') }}">
+
+{% endblock %}
+
+{% block content %}
+    <section class="blog_login">
+        <h2 class="page_title">Login</h2>
+        <form class="login_form" method="POST">
+            <label for="email">Email : </label>
+            <br>
+            <input class="input" type="email" placeholder="Enter Email" id="email" name="login_email">
+            <br>
+            <label for="password">Password : </label>
+            <br>
+            <input class="input" type="password" placeholder="Enter Password" id="password" name="login_password">
+            <br>
+            <button class="button" type="submit">Submit</button>
+        </form>
+    </section>
+{% endblock %}

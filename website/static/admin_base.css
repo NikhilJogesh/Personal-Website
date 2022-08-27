@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    background-color: black;
+    color: green;
+    font-family: 'Courier Prime'
+}
+
+a{
+    text-decoration: none;
+    color: green;
+}
+
+
+.input{
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    border-color: green;
+}
+
+.button{
+    padding: 5px;
+    background-color: black;
+    font-size: 20px;
+
+    border-radius: 5px;
+}
+
+.button:hover{
+    padding: 6px;
+}
