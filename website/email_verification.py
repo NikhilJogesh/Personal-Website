@@ -58,7 +58,7 @@ def send_verification_code(email, username, otp):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
 
-    with open("secret_key.json", "r") as f:
+    with open("config.json", "r") as f:
         json_file = json.load(f)
         sender_email = json_file["email_address"]
         print(sender_email)

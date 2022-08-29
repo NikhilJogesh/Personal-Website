@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
-
+import json
 
 db = SQLAlchemy()
 
@@ -9,21 +9,8 @@ DB_DIR = "dbdir"
 DB_FILE_NAME = "database.db"
 DB_PATH = f"{os.getcwd()}\{DB_DIR}\{DB_FILE_NAME}"
 
-# Context Manger
-class SecretKeyFile:
-    def __init__(self, filename, method):
-        try:
-            self.file = open(filename, method)
-        # Creates a new file and write a defual value to it
-        except FileNotFoundError:
-            self.file = open("secret_key.txt", "w+")
-            self.file.write("default")
+CONFIG_FILE = "config.json"
 
-    def __enter__(self):
-        return self.file
-
-    def __exit__(self, type, value, traceback):
-        self.file.close()
 
 def create_app():
 
@@ -32,9 +19,12 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_PATH}'
     db.init_app(app)
 
-    with SecretKeyFile("secret_key.txt", "r") as f:
-        secret_key = f.readline()
-        app.config['SECRET_KEY'] = secret_key
+    # Creates the config file if it does not already exist
+    create_config_file()
+
+    with open(CONFIG_FILE, "r") as f:
+        json_file = json.load(f)
+        app.config['SECRET_KEY'] = json_file["secret_key"]
 
 
     from .views import views
@@ -58,3 +48,21 @@ def create_database(app):
         os.makedirs("dbdir")
         db.create_all(app=app)
         print("Created Database!")
+
+def create_config_file():
+    if not os.path.exists(CONFIG_FILE):
+
+        # Data to be written
+        data = {
+            "secret_key": "sathiyajith",
+            "email_address": "",
+            "email_password": ""
+
+        }
+
+        # Serializing json
+        json_object = json.dumps(data, indent=4)
+
+        # Writing to sample.json
+        with open(CONFIG_FILE, "w") as file:
+            file.write(json_object)
