@@ -75,7 +75,7 @@ a{
 
 .nav_title{
     font-size: 45px;
-    
+
 }
 
 
@@ -88,3 +88,24 @@ a{
     margin-right: 10px;
     background-color: black;
 }
+
+@media screen and (max-width: 900px){
+    .nav_title{
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .nav_link{
+        font-size: 20px;
+    }
+
+    .home_link{
+        font-size: 20px;
+    }
+
+    .navbar{
+        flex-wrap: wrap;
+    }
+
+    
+ }

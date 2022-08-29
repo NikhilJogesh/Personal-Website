@@ -16,6 +16,7 @@
 .page_title{
     text-emphasis: 700;
     font-size: 60px;
+    margin-top: 10px;
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -100,3 +101,17 @@
     margin-bottom: 5px;
 }
 
+@media screen and (max-width: 900px){
+    .page_title{
+        font-size: 45px;
+    }
+
+    .post .post_info .title{
+        font-size: 32px;
+    }
+
+    .content{
+        font-size: 23px;
+    }
+
+}
