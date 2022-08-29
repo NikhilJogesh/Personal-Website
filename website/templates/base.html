@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
-    
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <title>{% block title %} {% endblock %}</title>
     {% block head %} {% endblock %}
 </head>
@@ -19,18 +19,19 @@
         <header class="header">
             <nav class="nav">
                 <h1 class="nav_title"> >>>NikhilJogesh </h1>
-                <ul class="nav_links"> 
+                <ul class="nav_links">
                     <li><a href="/" class="nav_button">HOME</a></li>
                     <li><a href="/projects"  class="nav_button">PROJECTS</a></li>
+                    <li><a href="/blog"  class="nav_button">BLOG</a></li>
                     <li><a href="/contacts"  class="nav_button">CONTACTS</a></li>
                 </ul>
             </nav>
-            {% block header %} 
+            {% block header %}
 
             {% endblock%}
         </header>
 
-        {% block content %} 
+        {% block content %}
 
         {% endblock%}
 
